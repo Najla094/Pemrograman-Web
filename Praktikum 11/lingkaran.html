@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas & Keliling Lingkaran</title>
+    <script>
+        function hitung_luas_keliling_lingkaran(){
+        // rumus phi
+        const phi = 3.14
+
+        // buat jari - jari
+        var r=20; // nilai bisa diubah
+
+        // rumus luas lingkaran
+        let l=phi * (r*r);
+
+        // rumus keliling lingkaran
+        let k=phi * (2*r);
+
+        // hasilnya
+        document.getElementById("luas").innerHTML="LUAS LINGKARAN: "+l;
+        document.getElementById("keliling").innerHTML="KELILING: "+k;
+    }
+    </script>
+</head>
+<body>
+    <h1>Menghitung Luas Keliling Lingkaran</h1>
+    <!-- soal: jika jari2 20 berapa luas lingkaran dan keliling lingkarannya -->
+    
+    Phi :
+    <input type="number" id="phi">
+    <br>
+
+    Jari jari : 
+    <input type="number" id="jari2">
+    <br>
+
+    <button onclick="hitung_luas_keliling_lingkaran()" >Hitung</button>
+
+    <hr>
+
+    <h2>Luas dan Keliling Lingkaran</h2>
+    <span id="luas"></span><br>
+    <span id="keliling"></span><br>
+    
+</body>
+</html>

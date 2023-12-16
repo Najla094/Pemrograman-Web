@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs mata uang</title>
+    <script>
+        function hitung_rupiah(){
+            
+            const jumlah_dollar = document.getElementById("usd").value
+            const kusr = 14650;
+
+            const nilai_rupiah = jumlah_dollar * kusr;
+
+            document.getElementById("nilai_rupiah").innerText = "Rp. "+ nilai_rupiah;
+        }
+    </script>
+        
+</head>
+<body>
+    <h1>Kurs Mata Uang</h1>
+    <div>USD</div> 
+    <input type="number" id="usd">
+    <button onclick="hitung_rupiah()" >Konversi</button>
+    <hr>
+    <div>IDR</div>
+    <!-- <input type="number" id="nilai_rupiah"> -->
+    <span id="nilai_rupiah"></span>
+
+</body>
+</html>
