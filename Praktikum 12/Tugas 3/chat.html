@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <script>
+        function chatmessage() {
+            var messageInput = document.getElementById('message_input');
+            var messageList = document.getElementById('message_list');
+    
+            if (messageInput.value.trim() !== '') {
+                var message = document.createElement('li');
+                message.className = 'message';
+                message.textContent = messageInput.value;
+                messageList.appendChild(message);
+                messageInput.value = '';
+    
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: ghostwhite;
+        }
+        #chat_container {
+            max-width: 500px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #message_box {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-top: 1px solid powderblue;
+            background-color: plum;
+            display: flex;
+        }
+        #message_input {
+            flex: 1;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid whitesmoke;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        #send_button {
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid green;
+            border-radius: 3px;
+            background-color: green;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        #message_list {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow-y: scroll;
+            max-height: 200px;
+        }
+        .message {
+            margin-bottom: 20px;
+            padding: 8px;
+            border-radius: 3px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chat_container">
+    <ul id="message_list"></ul>
+    <div id="message_box">
+        <input type="text" id="message_input" placeholder="Ketik Pesan">
+        <button id="send_button" onclick="chatmessage()">Kirim</button>
+    </div>
+</div>
+</body>
+</html>

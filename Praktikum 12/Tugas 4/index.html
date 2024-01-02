@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image_piker(){
+            const list_image = ["kucing.png","panda.png","pinguin.jpg"];
+            let pilihan = document.getElementById("opsi").value;
+
+            if(pilihan =="kucing"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `img/${select}`;
+            }
+            if (pilihan =="panda") {
+                let select = list_image[1];
+                document.getElementById("gambar").src = `img/${select}`;
+            }
+            if (pilihan =="pinguin") {
+                let select = list_image[2];
+                document.getElementById("gambar").src = `img/${select}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Piker</h1>
+
+    <select name="" id="opsi" onchange="image_piker()">
+        <option value="">Pilih Gambar</option>
+        <option value="kucing">Kucing</option>
+        <option value="panda">Panda</option>
+        <option value="pinguin">Pinguin</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="200px"> 
+    </div>
+</body>
+</html>
